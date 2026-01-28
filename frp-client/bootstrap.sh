@@ -15,13 +15,10 @@ function select_machine() {
             machine="amd64"
         ;;
         "armhf")
-            machine="arm"
+            machine="armhf"
         ;;
         "armv7")
             machine="arm"
-        ;;
-        "i386")
-            machine="386"
         ;;
     esac;
 
