@@ -12,27 +12,27 @@ privileged:
   - NET_ADMIN
 devices:
   - /dev/net/tun
+
 arch:
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 options:
-  serverAddr: "example.com"
+  serverAddr: "frp.freefrp.net"
   serverPort: 7000
-  authToken: "123456789"
-  webServerPort: 7500
-  webServerUser: "admin"
-  webServerPassword: "123456789"
-  customDomain: "example.com"
-  proxyName: "homeassistant"
+  authToken: "freefrp.net"
+  user: ""
+  proxies: []
+  debug: false
 schema:
   serverAddr: str
   serverPort: int
   authToken: str
-  webServerPort: int
-  webServerUser: str
-  webServerPassword: str
-  customDomain: str
-  proxyName: str
+  proxies: 
+    - type: str
+      localIP: str
+      localPort: int
+      name: str?
+      customDomains: str?
+      subdomain: str?
+      remotePort: int?
+  debug: bool?
